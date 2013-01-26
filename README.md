@@ -12,7 +12,7 @@ Installation
 
 * Include the directory in your `$fpath`, for example by adding in `~/.zshrc`:
 
-        fpath=(path/to/zsh-completions/src $fpath)
+        fpath=(path/to/zsh-completions-osx $fpath)
 
 * You may have to force rebuild `zcompdump`:
 
