@@ -1,0 +1,12 @@
+#compdef scselect
+
+_scselect_locations() {
+    typeset -Ua _locations
+    _locations=("${(@f)$(scselect | perl -ne 'if(/^\s+.*?\((.+?)\)/){print "$1\n"}')}")
+	_describe -t locations 'location' _locations
+}
+
+_arguments -s \
+    '-n[delay changing until the next system boot]' \
+    '1:location:_scselect_locations' \
+&& return 0
